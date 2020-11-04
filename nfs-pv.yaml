@@ -7,7 +7,7 @@ spec:
     storage: 100Mi
   accessModes:
     - ReadWriteMany
-  persistentVolumeClaim: Recycle
+  persistentVolumeReclaimPolicy: Recycle
   storageClassName: nfs
   nfs:
     server: 172.16.16.102
