@@ -2,7 +2,7 @@
 # serves a simple web page.
 
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment 
 metadata:
   name: nfs-web
 spec:
@@ -25,6 +25,7 @@ spec:
             # name must match the volume name below
             - name: nfs
               mountPath: "/usr/share/nginx/html"
+      nodeName: kworker1.example.com 
       volumes:
       - name: nfs
         persistentVolumeClaim:
